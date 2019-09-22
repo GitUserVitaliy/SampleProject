@@ -7,21 +7,15 @@ public class Task2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number: ");
         float a = sc.nextFloat();
-        System.out.println("Enter pow: ");
-        int b = sc.nextInt();
-        System.out.println(isPowerOfNumber(a,b));
+        System.out.println(isPowerOfNumber(a));
     }
-    public static boolean isPowerOfNumber(float value,int pow) {
-        float num = Math.abs(value);
-        while(true) {
-            num = num / pow;
-            if(num % 1 == 0) {
-                if(num == 1) {
-                    return true;
-                }
-            } else {
-                return false;
+    public static boolean isPowerOfNumber(float value) {
+        for(int i = 0;Math.pow(2, i) <= value;i++) {
+            if ((Math.pow(2, i)) == value) {
+                return true;
             }
         }
+        return false;
     }
-}
+        }
+
