@@ -11,14 +11,17 @@ public class Task1 {
          int s_num = sc.nextInt();
         System.out.println("Enter third number: ");
          int t_num = sc.nextInt();
-        if (f_num > s_num && f_num > t_num) {
+        if (f_num >= s_num && f_num >= t_num) {
             System.out.println(f_num);
+            System.exit(0);
         }
-        if (s_num > f_num && s_num > t_num) {
+        if (s_num >= f_num && s_num >= t_num) {
             System.out.println(s_num);
+            System.exit(0);
         }
-        if (t_num > s_num && t_num > f_num) {
+        if (t_num >= s_num && t_num >= f_num) {
             System.out.println(f_num);
+            System.exit(0);
         }
     }
 }
