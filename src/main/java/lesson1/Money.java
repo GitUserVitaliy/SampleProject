@@ -2,7 +2,7 @@ package lesson1;
 
 import java.util.Scanner;
 
-public class Justice {
+public class Money {
 
     public static void main(String[] args) {
         int money = 0;

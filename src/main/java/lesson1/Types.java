@@ -1,6 +1,6 @@
 package lesson1;
 
-public class Main {
+public class Types {
 
     public static void main(String[] args) {
         byte numByte = 73; //1 byte
