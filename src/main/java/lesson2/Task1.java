@@ -12,13 +12,27 @@ public class Task1 {
         System.out.println("Enter third number: ");
         int t_num = sc.nextInt();
         if (f_num <= s_num && f_num <= t_num) {
-            System.out.println("Mim-> " + f_num);
+            System.out.println("Min-> " + f_num);
         } else {
             if (s_num <= f_num && s_num <= t_num) {
-                System.out.println("Mim-> " + s_num);
+                System.out.println("Min-> " + s_num);
             } else {
-                System.out.println("Mim-> " + t_num);
+                System.out.println("Min-> " + t_num);
+            }
+        }
+        System.out.println("Min-> " + minForThree(f_num,s_num,t_num));
+    }
+    public static int minForThree(int a, int b,int c) {
+            if (a <= b && a <= c) {
+            return a;
+        } else {
+            if (b <= a && b <= c) {
+                return b;
+            } else {
+                return c;
             }
         }
     }
 }
+
+
