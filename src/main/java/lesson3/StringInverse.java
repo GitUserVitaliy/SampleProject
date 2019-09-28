@@ -10,5 +10,13 @@ public class StringInverse {
         for (int i = str.length() - 1; i >= 0; i--) {
             System.out.print(str.charAt(i));
         }
+        System.out.println(Inverse(str));
+    }
+    public static String Inverse(String str) {
+        String inv = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            inv = inv + str.charAt(i);
+        }
+        return inv;
     }
 }
