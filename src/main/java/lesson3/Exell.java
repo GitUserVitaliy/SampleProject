@@ -3,7 +3,7 @@ package lesson3;
 import java.util.Scanner;
 
 public class Exell {
-    public static void main(String[] args) {
+    public static void main(StringExample[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter length: ");
         float length = sc.nextFloat();
