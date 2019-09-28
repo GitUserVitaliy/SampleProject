@@ -4,13 +4,15 @@ import java.util.Scanner;
 
 public class StringInverse {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+       Scanner sc = new Scanner(System.in);
         System.out.println("Enter string: ");
         String str = sc.next();
-        for (int i = str.length() - 1; i >= 0; i--) {
-            System.out.print(str.charAt(i));
+        if(isP(str) == true) {
+            System.out.println("Yes_P");
+        } else {
+            System.out.println("No_P");
         }
-        System.out.println(Inverse(str));
+
     }
     public static String Inverse(String str) {
         String inv = "";
@@ -18,5 +20,10 @@ public class StringInverse {
             inv = inv + str.charAt(i);
         }
         return inv;
+    }
+    public static Boolean isP(String string) {
+        String reversedString = Inverse(string);
+        Boolean result = string.equals(reversedString);
+        return result;
     }
 }
