@@ -15,10 +15,14 @@ public class Arrays {
         System.out.println(sA(arr));
     }
     public static double sA(int arr[]) {
-        int result = 0;
-        for (int i = 0; i < arr.length; i++) {
-            result = result + arr[i];
+        if(arr.length != 0) {
+            int result = 0;
+            for (int i = 0; i < arr.length; i++) {
+                result = result + arr[i];
+            }
+            return (result / arr.length);
+        } else {
+           return 0;
         }
-        return (result / arr.length);
     }
 }

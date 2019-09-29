@@ -13,4 +13,10 @@ public class TestArrays {
         double result = Arrays.sA(arr);
         assertEquals(3,result);
     }
+    @Test
+    public void testEmptyArray() {
+        int arr[] = {};
+        double result = Arrays.sA(arr);
+        assertEquals(0,result);
+    }
 }
