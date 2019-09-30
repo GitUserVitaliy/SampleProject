@@ -1,6 +1,5 @@
-package test.lesson4;
+package lesson4;
 
-import lesson4.DeleteBadWords;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestDel {
