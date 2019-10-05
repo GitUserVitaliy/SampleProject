@@ -1,29 +1,15 @@
 package lesson5;
 
-public class Teacher {
-    private String name;
-    private int age;
+public class Teacher extends Human{
     private String subject;
-
     public Teacher(String name, int age, String subject) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.subject = subject;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
     public void sayHello() {
-        System.out.println("Hello, my name " + name);
+        System.out.println("Hello, am a teacher, and my name "+name);
+    }
+    public void teachStudent(Student student) {
+        student.sayHello();
     }
 }
