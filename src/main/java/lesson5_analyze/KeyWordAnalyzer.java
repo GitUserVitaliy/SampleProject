@@ -1,6 +1,6 @@
 package lesson5_analyze;
 
-public class KeyWordAnalyzer {
+public class KeyWordAnalyzer implements Analyzer{
     protected String[] keyWords;
     public boolean analyze(String text) {
         for (int i = 0; i < keyWords.length; i++) {
