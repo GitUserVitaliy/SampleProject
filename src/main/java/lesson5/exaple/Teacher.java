@@ -1,6 +1,6 @@
-package lesson5;
+package lesson5.exaple;
 
-public class Teacher extends Human implements Polite{
+public class Teacher extends Human implements Polite {
     private String subject;
     public Teacher(String name, int age, String subject) {
         super(name, age);

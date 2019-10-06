@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.exaple;
 
 public class Scenario {
     public static void main(String[] args) {

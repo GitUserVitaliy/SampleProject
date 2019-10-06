@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.exaple;
 
 public class Student extends Human implements Polite {
     private int form;

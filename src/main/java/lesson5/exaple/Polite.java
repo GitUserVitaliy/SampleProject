@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.exaple;
 
 public interface Polite {
     void goodBye();
