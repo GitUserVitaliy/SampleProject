@@ -1,4 +1,4 @@
-package lesson5.exaple;
+package lesson5.example;
 
 public class Human {
     protected String name;

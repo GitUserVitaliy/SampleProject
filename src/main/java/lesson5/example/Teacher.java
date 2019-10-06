@@ -1,4 +1,4 @@
-package lesson5.exaple;
+package lesson5.example;
 
 public class Teacher extends Human implements Polite {
     private String subject;
