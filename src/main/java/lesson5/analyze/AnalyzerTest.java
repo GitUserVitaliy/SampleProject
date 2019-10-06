@@ -1,4 +1,4 @@
-package lesson5_analyze;
+package lesson5.analyze;
 
 import java.util.Scanner;
 

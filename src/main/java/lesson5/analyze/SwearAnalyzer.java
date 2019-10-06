@@ -1,4 +1,4 @@
-package lesson5_analyze;
+package lesson5.analyze;
 
 public class SwearAnalyzer extends KeyWordAnalyzer {
     public SwearAnalyzer() {
