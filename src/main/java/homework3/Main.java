@@ -1,6 +1,5 @@
 package homework3;
 
-import javax.print.attribute.SetOfIntegerSyntax;
 import java.util.*;
 
 public class Main {
