@@ -2,6 +2,8 @@ package lesson8.App;
 
 import lesson4.Auth;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class AppCRUD {
@@ -54,6 +56,22 @@ public class AppCRUD {
                     System.out.println("<Error>");
                 }
                 break;
+            }
+            case 2:{
+                System.out.println("<Enter_Login>");
+                String login = sc.next();
+                if(service.deleteUserByLogin(login)) {
+                    System.out.println("<Success>");
+                } else {
+                    System.out.println("<Access_Denied>");
+                }
+                break;
+            }
+            case 3:{
+                List<AppUser> list = new LinkedList<>();
+
+
+
             }
             case 5:{
                 System.out.println("<Exit>");
