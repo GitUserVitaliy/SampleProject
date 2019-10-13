@@ -11,11 +11,10 @@ public class Main {
             int numA = sc.nextInt();
             int numB = sc.nextInt();
             System.out.println(numA + " / " + numB + " = " + numA / numB);
-        } catch (ArrayIndexOutOfBoundsException exception) {
-            System.out.println("<Error>");
-            System.out.println("<UnknownIndex>");
         } catch (InputMismatchException exception) {
             System.out.println("<ScannerError>");
+        } catch (ArithmeticException exception) {
+            System.out.println("<Error>");
         }
     }
 }
