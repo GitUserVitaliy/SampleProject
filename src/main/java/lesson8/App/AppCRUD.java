@@ -1,14 +1,12 @@
 package lesson8.App;
 
-import lesson4.Auth;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class AppCRUD {
     public static void printMenu() {
-        System.out.println("AppGRUD");
+        System.out.println("<AppGRUD>");
         System.out.println("<0><Sign_In>");
         System.out.println("<1><Sign_Un>");
         System.out.println("<2><Remove_User>");
@@ -25,7 +23,7 @@ public class AppCRUD {
         command = sc.nextInt();
         switch (command) {
             default:{
-                System.out.println("<Unknown command>");
+                System.out.println("@Unknown command@");
                 break;
             }
             case 0:{
@@ -34,9 +32,9 @@ public class AppCRUD {
                 System.out.println("<Enter_Password>");
                 String password = sc.next();
                 if(service.auth(login,password)) {
-                    System.out.println("<Success>");
+                    System.out.println("@Success@");
                 } else {
-                    System.out.println("<Access_Denied>");
+                    System.out.println("@Access_Denied@");
                 }
                 break;
             }
@@ -51,9 +49,9 @@ public class AppCRUD {
                 int age = sc.nextInt();
                 AppUser user = new AppUser(login,password,fullName,age);
                 if(service.addUser(user)) {
-                    System.out.println("<Success>");
+                    System.out.println("@Success@");
                 } else {
-                    System.out.println("<Error>");
+                    System.out.println("@Error@");
                 }
                 break;
             }
@@ -61,20 +59,40 @@ public class AppCRUD {
                 System.out.println("<Enter_Login>");
                 String login = sc.next();
                 if(service.deleteUserByLogin(login)) {
-                    System.out.println("<Success>");
+                    System.out.println("@Success@");
                 } else {
-                    System.out.println("<Access_Denied>");
+                    System.out.println("@Access_Denied@");
                 }
                 break;
             }
             case 3:{
-                List<AppUser> list = new LinkedList<>();
-
-
-
+                List<AppUser> list = new LinkedList<>(service.getAllUsers());
+                System.out.println("<Users>");
+                for (int i = 0; i < list.size(); i++) {
+                    System.out.println(list.get(i).toString());
+                }
+                System.out.println("<End>");
+                break;
+            }
+            case 4:{
+                System.out.println("<Enter_new_Login>");
+                String login = sc.next();
+                System.out.println("<Enter_Password>");
+                String password = sc.next();
+                System.out.println("<Enter_Fullname>");
+                String fullName = sc.next();
+                System.out.println("<Enter_Age>");
+                int age = sc.nextInt();
+                AppUser user = new AppUser(login,password,fullName,age);
+                if(service.editUser(user)) {
+                    System.out.println("@Success@");
+                } else {
+                    System.out.println("@Access_Denied@");
+                }
+                break;
             }
             case 5:{
-                System.out.println("<Exit>");
+                System.out.println("@Exit@");
                 return;
             }
         }

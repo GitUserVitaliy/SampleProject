@@ -24,4 +24,11 @@ public class AppUser {
     public int getAge() {
         return age;
     }
+    public String toString() {
+        return login +"{" +
+                "password='" + password + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
