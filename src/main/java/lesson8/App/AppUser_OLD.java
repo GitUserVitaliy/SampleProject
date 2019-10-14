@@ -1,12 +1,12 @@
 package lesson8.App;
 
-public class AppUser {
+public class AppUser_OLD {
     private String login;
     private String password;
     private String fullName;
     private int age;
 
-    public AppUser(String login, String password, String fullName, int age) {
+    public AppUser_OLD(String login, String password, String fullName, int age) {
         this.login = login;
         this.password = password;
         this.fullName = fullName;

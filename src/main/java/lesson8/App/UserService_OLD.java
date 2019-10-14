@@ -2,18 +2,18 @@ package lesson8.App;
 
 import java.util.*;
 
-public class UserService {
-    private Map<String,AppUser> users;
-    public UserService() {
+public class UserService_OLD {
+    private Map<String, AppUser_OLD> users;
+    public UserService_OLD() {
         users = new HashMap<>();
-        AppUser Admin = new AppUser("admin","admin","admin",0);
+        AppUser_OLD Admin = new AppUser_OLD("admin","admin","admin",0);
         users.put("admin",Admin);
     }
-    public AppUser getUserByLogin(String login) {
+    public AppUser_OLD getUserByLogin(String login) {
         return users.get(login);
     }
-    public boolean addUser(AppUser user) {
-        for (Map.Entry<String,AppUser> pair : users.entrySet()) {
+    public boolean addUser(AppUser_OLD user) {
+        for (Map.Entry<String, AppUser_OLD> pair : users.entrySet()) {
             if(user.equals(pair.getValue())) {
                 return false;
             }
@@ -29,26 +29,26 @@ public class UserService {
             return false;
         }
     }
-    public List<AppUser> getAllUsers(){
+    public List<AppUser_OLD> getAllUsers(){
         return new LinkedList<>(users.values());
     }
-    public boolean editUser(AppUser user){
-        for (Map.Entry<String,AppUser> pair : users.entrySet()) {
-           if(pair.getKey().equals(user.getLogin())) {
+    public boolean editUser(AppUser_OLD user){
+        for (Map.Entry<String, AppUser_OLD> pair : users.entrySet()) {
+            if(pair.getKey().equals(user.getLogin())) {
                 users.remove(user.getLogin());
                 users.put(user.getLogin(),user);
                 return true;
-           }
+            }
         }
         return false;
     }
     public boolean auth(String login,String password){
         if(users.containsKey(login)){
-            AppUser user = users.get(login);
+            AppUser_OLD user = users.get(login);
             if(user.getPassword().equals(password)){
                 return true;
             } else {
-                 return false;
+                return false;
             }
         } else {
             return false;

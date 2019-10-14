@@ -4,11 +4,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ApplicationCRUD {
+public class AppCRUD {
     public static void printMenu() {
         System.out.println("<AppGRUD>");
         System.out.println("<0><Sign_In>");
-        System.out.println("<1><Sign_Un>");
+        System.out.println("<1><Sign_Up>");
         System.out.println("<2><Remove_User>");
         System.out.println("<3><Get_All_Users>");
         System.out.println("<4><Edit_User>");
