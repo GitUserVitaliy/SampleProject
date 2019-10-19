@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.Test;
 
 import java.io.FileReader;
 import java.io.IOException;
