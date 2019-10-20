@@ -25,10 +25,6 @@ public class AppUser {
         return age;
     }
     public String toString() {
-        return login +"{" +
-                "password='" + password + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", age=" + age +
-                '}';
+        return login +" " + password + " " + fullName + " " + age;
     }
 }

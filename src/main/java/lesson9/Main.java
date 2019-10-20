@@ -1,4 +1,4 @@
-package lesson9.Test;
+package lesson9;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        try (FileReader reader = new FileReader("src\\main\\resources\\numbers.txt")) {
+        try (FileReader reader = new FileReader("src\\main\\resources\\users.txt")) {
             List<Integer> numbers = new LinkedList<>();
             Scanner sc = new Scanner(reader);
             while(sc.hasNextInt()) {

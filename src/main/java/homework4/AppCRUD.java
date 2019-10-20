@@ -12,12 +12,14 @@ public class AppCRUD {
         System.out.println("<2><Remove_User>");
         System.out.println("<3><Get_All_Users>");
         System.out.println("<4><Edit_User>");
-        System.out.println("<5><Exit>");
+        System.out.println("<5><Overwrite_Users>");
+        System.out.println("<6><Exit>");
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         UserService service = new UserService();
         int command = 0;
+        String path = "src\\main\\resources\\users.txt";
         while(true) {
             printMenu();
             command = sc.nextInt();
@@ -92,6 +94,11 @@ public class AppCRUD {
                     break;
                 }
                 case 5:{
+                   service.saveUsers();
+                    System.out.println("@Access@");
+                    break;
+                }
+                case 6:{
                     System.out.println("@Exit@");
                     return;
                 }

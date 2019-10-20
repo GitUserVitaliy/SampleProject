@@ -5,8 +5,9 @@ import java.util.*;
 public class UserService {
     private Map<String, AppUser> users;
     private AppUser Admin = new AppUser("admin","admin","admin",0);
+    private String path = "src\\main\\java\\homework4\\users.txt";
     public UserService() {
-        users = new HashMap<>();
+        users = FileHelper.readFromFile(path);
         users.put("admin",Admin);
     }
     public AppUser getUserByLogin(String login) {
@@ -61,5 +62,8 @@ public class UserService {
         } else {
             return false;
         }
+    }
+    public void saveUsers() {
+        FileHelper.saveToFile(path,users,false);
     }
 }
