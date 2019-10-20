@@ -5,7 +5,7 @@ import java.util.*;
 public class UserService {
     private Map<String, AppUser> users;
     private AppUser Admin = new AppUser("admin","admin","admin",0);
-    private String path = "src\\main\\java\\homework4\\users.txt";
+    private final String path = "src\\main\\java\\homework4\\users.txt";
     public UserService() {
         users = FileHelper.readFromFile(path);
         users.put("admin",Admin);

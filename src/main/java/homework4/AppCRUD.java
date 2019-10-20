@@ -1,7 +1,10 @@
 package homework4;
 
+import com.github.javafaker.Faker;
+
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class AppCRUD {
@@ -101,6 +104,31 @@ public class AppCRUD {
                 case 6:{
                     System.out.println("@Exit@");
                     return;
+                }
+                case 666:{
+                    Faker faker = new Faker(new Locale("ru"));
+                    System.out.println("<ENTER THE HELL NUMBER!X3>");
+                    long hell = sc.nextInt();
+                    long begin = System.currentTimeMillis();
+                    for (int i = 0; i < hell; i++) {
+                        AppUser hellUser = new AppUser(faker.name().firstName(),faker.company().name().replaceAll(" ", ""),faker.name().fullName().replaceAll(" ", ""),faker.number().randomDigit());
+                        service.addUser(hellUser);
+                        System.out.println(i);
+                    }
+                    for (int i = 0; i < hell; i++) {
+                        AppUser hellUser = new AppUser(faker.superhero().name().replaceAll(" ", ""),faker.company().name().replaceAll(" ", ""),faker.name().fullName().replaceAll(" ", ""),faker.number().randomDigit());
+                        service.addUser(hellUser);
+                        System.out.println(i + hell);
+                    }
+                    for (int i = 0; i < hell; i++) {
+                        AppUser hellUser = new AppUser(faker.name().username().replaceAll(" ", ""),faker.company().name().replaceAll(" ", ""),faker.name().fullName().replaceAll(" ", ""),faker.number().randomDigit());
+                        service.addUser(hellUser);
+                        System.out.println();
+                    }
+                    long end = System.currentTimeMillis();
+                    System.out.println("@CURRENT TIME->@" + (end - begin));
+                    System.out.println("@CHEAT_ACTIVATED@");
+                    break;
                 }
             }
         }
